@@ -1,11 +1,9 @@
-FROM adoptopenjdk/openjdk11
-  
+FROM eclipse-temurin:17-jre
+
+WORKDIR /app
+
+COPY target/*.jar app.jar
+
 EXPOSE 8080
- 
-ENV APP_HOME /usr/src/app
 
-COPY target/database_service_project-2.0.0.jar $APP_HOME/app.jar
-
-WORKDIR $APP_HOME
-
-CMD ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "app.jar"]
