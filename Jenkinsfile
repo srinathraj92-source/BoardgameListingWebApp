@@ -61,7 +61,7 @@ tools {
 
             steps {
 
-                sh 'docker build -t veera03007/k8:latest .'
+                sh 'docker build -t srinathraj08/tl:latest .'
 
             }
 
@@ -76,7 +76,7 @@ tools {
                     url: 'https://index.docker.io/v1/'
                 ) {
 
-                    sh 'docker push veera03007/k8:latest'
+                    sh 'docker push srinathraj08/tl:latest'
 
                 }
 
